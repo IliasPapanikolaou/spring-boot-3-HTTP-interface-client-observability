@@ -1,0 +1,37 @@
+### Get all articles
+GET http://localhost:8081/content
+
+### Get all articles with header
+GET http://localhost:8081/content/header
+
+### Get article by Id
+GET http://localhost:8081/content/1
+
+### Create new articles
+POST http://localhost:8081/content
+Content-Type: application/json
+
+{
+  "id": 5,
+  "title": "Latest news",
+  "body": "These are the latest news"
+}
+
+### Get newly created article
+GET http://localhost:8081/content/5
+
+### Update existing article
+PUT http://localhost:8081/content/5
+Content-Type: application/json
+
+{
+  "id": 5,
+  "title": "Latest news",
+  "body": "These are the latest news updated"
+}
+
+### Get newly updated article
+GET http://localhost:8081/content/5
+
+### Delete article
+DELETE http://localhost:8081/content/5
